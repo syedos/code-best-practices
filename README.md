@@ -1,8 +1,46 @@
-# Claude Code - Leaked Source Code
+# Claude Code - Source Code (Publicly Exposed via npm)
 
-> **Disclaimer:** This repository contains the leaked source code of **Claude Code**, Anthropic's official CLI and IDE tool for Claude. This code is the property of Anthropic and is shared here for educational and research purposes only.
+> **LEGAL DISCLAIMER:** This repository is provided strictly for **educational, research, and security analysis purposes** under the principles of **fair use** and **public interest**. See [Legal Notice](#legal-notice) below.
 
-## How This Was Leaked
+---
+
+## Legal Notice
+
+### Fair Use & Public Interest Justification
+
+This source code was **not obtained through hacking, reverse engineering, or unauthorized access**. It was publicly and freely accessible to anyone via Anthropic's official npm registry due to an accidental inclusion of source map files in a published package. The code was:
+
+1. **Published publicly** by Anthropic themselves (unintentionally) on the npm registry, a public package repository
+2. **Freely downloadable** by anyone running `npm install` — no authentication, credentials, or circumvention of any access controls was required
+3. **Extracted from source maps** — a standard, well-documented build artifact — using publicly available, legitimate tooling
+4. **Already widely distributed** across the internet before this repository was created
+
+### Legal Basis
+
+- **No circumvention of access controls:** The source maps were shipped inside a publicly available npm package. No passwords, encryption, DRM, or access restrictions were bypassed. This means the **CFAA (Computer Fraud and Abuse Act)** and **DMCA anti-circumvention (Section 1201)** provisions are unlikely to apply.
+- **No Terms of Service violation:** Downloading a public npm package and inspecting its contents is standard, expected behavior within the npm ecosystem.
+- **Fair use (17 U.S.C. Section 107):** This repository is shared for purposes of security research, education, commentary, and analysis — all of which are favored under fair use doctrine. The purpose is non-commercial and transformative (analysis/research, not competing with Claude Code).
+- **Public interest:** Understanding how AI coding tools operate, what data they access, and how their permission/safety systems work is a matter of significant public interest, particularly for security researchers and the developer community.
+- **First Amendment protections:** Publishing and discussing publicly available code is protected speech, particularly when done for research and commentary purposes.
+
+### DMCA / Takedown
+
+If Anthropic or their legal representatives wish to request removal of this repository, they may file a **DMCA takedown request** through GitHub's standard process. This repository will comply with valid legal requests. Contact: file via [GitHub's DMCA process](https://docs.github.com/en/site-policy/content-removal-policies/dmca-takedown-policy).
+
+### What This Repository Is NOT
+
+- This is **NOT** a tool for piracy or commercial exploitation
+- This is **NOT** intended to harm Anthropic or compete with their products
+- This is **NOT** obtained through any illegal means
+- This repository does **NOT** contain API keys, secrets, credentials, or any private user data
+
+### Precedent
+
+Accidental source code exposure via source maps, debug artifacts, or misconfigured deployments is a well-documented phenomenon. Similar incidents have occurred with major companies (e.g., Twitch, Samsung, Nintendo), and the security research community has consistently engaged in analysis of such leaks for public benefit without legal repercussion, provided no access controls were circumvented.
+
+---
+
+## How This Was Exposed
 
 On **March 31, 2026**, security researcher **[Chaofan Shou (@Fried_rice)](https://twitter.com/Fried_rice)** discovered that the full Claude Code source code was exposed via a **source map file** (`.map`) left in Anthropic's **npm registry** package. Source maps are debug artifacts that map minified/bundled code back to original source — Anthropic accidentally shipped one in their published npm package, allowing anyone to reconstruct the entire original TypeScript codebase.
 
@@ -182,6 +220,15 @@ The `commands/` directory contains **80+ slash commands**, each in its own folde
 - **Sub-agent architecture** for parallelizing complex tasks
 - **Source map file** in npm package is what led to this leak
 
-## License
+## Intellectual Property Notice
 
-This code is the intellectual property of **Anthropic**. It was not intentionally open-sourced. Use at your own discretion for educational and research purposes.
+This source code is the intellectual property of **Anthropic, PBC**. It was not intentionally open-sourced. Anthropic retains all rights, including copyright, over this code.
+
+This repository does not claim any ownership or license over the code. It is shared solely under fair use principles for:
+- **Security research** — understanding AI tool safety mechanisms
+- **Education** — studying large-scale TypeScript/AI application architecture
+- **Public interest** — transparency into how AI coding assistants operate
+
+**If you are Anthropic or represent Anthropic:** Please see the [DMCA / Takedown](#dmca--takedown) section above. This repository will promptly comply with valid takedown requests.
+
+**If you are a user of this code:** Do not use this code for commercial purposes, to build competing products, or in any way that infringes on Anthropic's intellectual property rights. This code is for reading, learning, and research only.
